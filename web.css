@@ -1,0 +1,125 @@
+/* css ::-webkit-search-results-decoration */
+*{
+    margin: 0;
+    padding: 0;
+}
+ /* css variables */
+:root{
+    --navbar-height: 10px;
+}
+
+/* navigation bar */
+#navbar{
+    display: flex;/*use for change verticle to horizontal manner*/
+    align-items: center;
+}
+/* logo and image */
+#logo{
+        margin: 10px 30px;
+}
+#logo img{
+  margin: auto;
+}
+
+/* list styling */
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai',cursive;
+}
+
+#navbar::before{
+     /*using pseudo selector here for apply this concept*/
+     content: "";
+     background-color:black;
+     position: absolute;
+    
+     height: 10%;
+     width: 100%;
+     z-index: -1;
+     opacity: 1;
+}
+
+#navbar ul li{
+    list-style:none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 10px;
+    text-decoration: none;/*underline was remove by this*/
+}
+#navbar ul li a:hover{
+    /* use for change background of button when mouse come on the button */
+    color: black;
+    background-color: white;
+}
+
+/* home section */
+#home::before{
+    content: "";
+     background:url('../bg.jpg') no-repeat center center/cover;
+     position:absolute;
+     
+    margin-bottom: 20px;
+     height: 60%;
+     width:100%;
+     z-index: -1;
+     opacity: 0.90;
+}
+#home{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    padding: 3px 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Bree serif',serif;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif',Serif;
+}
+/* services0 */
+#services{
+    margin: 34px;
+    display: flex;
+} 
+#services.box img{
+  height: 150px;
+  
+
+} 
+#sevices.box{
+    
+  } 
+/* utility class */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+    text-align: center;
+}
+
+.h-secondary{
+    font-size: 3.8rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(42, 149, 165);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    margin: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
